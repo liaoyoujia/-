@@ -1,7 +1,8 @@
 {
   "pages": [
-    "page/book/book",
     "page/fashion/fashion",
+    
+    "page/book/book",
     "page/like/like"
   ],
   "window": {
@@ -11,18 +12,26 @@
     "navigationStyle": "default"
   },
   "tabBar": {
+    "backgroundColor":"#fff",
     "list": [
       {
         "pagePath":"page/fashion/fashion",
-        "text": "流行"
+        "text": "流行",
+        "iconPath": "./images/tab/classic.png",
+        "selectedIconPath":"./images/tab/classic@highlight.png"
       },
       {
         "pagePath": "page/book/book",
-        "text": "书籍"
+        "text": "书籍",
+        "iconPath": "./images/tab/book.png",
+        "selectedIconPath": "./images/tab/book@highlight.png"
       },
       {
         "pagePath": "page/like/like",
-        "text": "喜欢"
+        "text": "喜欢",
+        "iconPath": "./images/tab/my.png",
+        "selectedIconPath": "./images/tab/my@highlight.png"
+        
       }
     ]
   }

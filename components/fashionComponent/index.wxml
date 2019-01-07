@@ -1,0 +1,40 @@
+<!-- components/fashionComponent/index.wxml -->
+<view class='box'>
+    <view class="top">
+        <view class="left">
+            <view class="day">
+                <view class="no">No.</view>
+                <view class="day-item">08</view>
+            </view>
+            <view class='line'></view>
+            <view class='date'>
+                <view class="month">一月</view>
+                <view class="year">2019</view>
+            </view>
+        </view>
+        <view class='right'>
+            <view class="heart">
+                <image src="../../images/icon/like.png" class="heart-img"></image>
+                <text class="assist">190</text>
+            </view>
+            <view class="forward">
+                <button open-type="share" class="content">
+                    <image src='../../images/icon/share.png' class="share"></image>
+                </button>
+            </view>
+        </view>
+    </view>
+    <slot></slot>
+    <view class="bottom">
+        <view class='title'>???????,???????????</view>
+        <view class='toggle'>
+            <view class=".left-toggle">
+                <image src='../../images/book/'></image>
+            </view>
+            <view class="content">????????</view>
+            <view class=".right-toggle">
+                <image></image>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "v-content": "/components/fashionComponent/index"
+  }
 }
