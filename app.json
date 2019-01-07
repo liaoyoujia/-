@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "page/book/book",
+    "page/fashion/fashion",
+    "page/like/like"
+  ],
+  "window": {
+    "navigationBarTitleText": "今夜有雨",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath":"page/fashion/fashion",
+        "text": "流行"
+      },
+      {
+        "pagePath": "page/book/book",
+        "text": "书籍"
+      },
+      {
+        "pagePath": "page/like/like",
+        "text": "喜欢"
+      }
+    ]
+  }
+}
