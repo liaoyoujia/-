@@ -10,35 +10,46 @@ Page({
     currentData: {},
     index: 0,
     leftFlag:false,
-    rightFlag:true
+    rightFlag:true,
+    type:0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   getData(res) {
+    let type=res.type
     console.log(res, 3312312)
     this.setData({
-      currentData: res                    
+      currentData: res ,
+      type                   
     })
   },
   allotPre(res) {
+    console.log(res, 3312312)
+
     let value = res.index;
+    let type=res.type
+    // if(type==100){
+    //   this.data.type=type
+    // }
+
     if(value==1){
-      this.setData({currentData: res, leftFlag: true ,rightFlag:false})
+      this.setData({currentData: res, leftFlag: true ,rightFlag:false,type})
       return false
     }
     
-    (value < this.data.index) ? this.setData({ currentData: res, leftFlag: true }) : this.setData({ currentData: res, leftFlag: false })
+    (value < this.data.index) ? this.setData({ currentData: res, leftFlag: true,type }) : this.setData({ currentData: res, leftFlag: false ,type})
   },
   allotNext(res){
+    let type=res.type
     let value = res.index;
     if(value==this.data.index){
-      this.setData({currentData: res, leftFlag: false ,rightFlag:true})
+      this.setData({currentData: res, leftFlag: false ,rightFlag:true,type})
       return false
     }
     
-    (value < this.data.index) ? this.setData({ currentData: res, leftFlag: true }) : this.setData({ currentData: res, leftFlag: false })
+    (value < this.data.index) ? this.setData({ currentData: res, leftFlag: true,type }) : this.setData({ currentData: res, leftFlag: false ,type})
   },
 
 

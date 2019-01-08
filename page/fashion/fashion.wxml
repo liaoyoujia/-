@@ -8,6 +8,8 @@
     flagRight="{{rightFlag}}"
     bind:Next="getNextData"
     bind:Previous="getPreData">
-        <v-movie bigImage="{{currentData.image}}" />
+        <v-movie bigImage="{{currentData.image}}" wx:if="{{type==100}}"/>
+        <v-music url="{{currentData.url}}" wx:if="{{type==200}}"></v-music>
+        <v-sentence bigImage="{{currentData.image}}" wx:if="{{type==300}}"></v-sentence>
     </v-content>
 </view>

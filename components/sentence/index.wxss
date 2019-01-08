@@ -1,1 +1,25 @@
 /* components/sentence/index.wxss */
+.sentece{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 76rpx;
+
+}
+.big-image{
+    
+    width: 750rpx;
+    height:500rpx;
+
+}
+.bottom{
+    position: absolute;
+    bottom: -80rpx;
+    left:20rpx;
+}
+.small-image{
+    width: 46rpx;
+    height:142rpx;
+}

@@ -1,2 +1,9 @@
-<!--components/sentence/index.wxml-->
-<text>components/sentence/index.wxml</text>
+<!-- components/sentence/index.wxml -->
+<view class="sentece">
+    <view class="top">
+        <image src="{{bigImage}}" class="big-image"></image>
+    </view>
+    <view class="bottom">
+        <image src='../../images/icon/essay@tag.png' class="small-image"></image>
+    </view>
+</view>
