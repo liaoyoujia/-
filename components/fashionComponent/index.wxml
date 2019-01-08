@@ -4,21 +4,21 @@
         <view class="left">
             <view class="day">
                 <view class="no">No.</view>
-                <view class="day-item">08</view>
+                <view class="day-item">{{(index<10)?('0'+index):index}}</view>
             </view>
             <view class='line'></view>
             <view class='date'>
-                <view class="month">一月</view>
-                <view class="year">2019</view>
+                <view class="month">{{date.month}}</view>
+                <view class="year">{{date.year}}</view>
             </view>
         </view>
         <view class='right'>
             <view class="heart">
                 <image src="../../images/icon/like.png" class="heart-img"></image>
-                <text class="assist">190</text>
+                <text class="assist">{{fav}}</text>
             </view>
             <view class="forward">
-                <button open-type="share" class="content">
+                <button open-type="share" class="contain">
                     <image src='../../images/icon/share.png' class="share"></image>
                 </button>
             </view>
@@ -26,14 +26,17 @@
     </view>
     <slot></slot>
     <view class="bottom">
-        <view class='title'>???????,???????????</view>
+        <view class='content'>{{content}}</view>
         <view class='toggle'>
-            <view class=".left-toggle">
-                <image src='../../images/book/'></image>
+            <view class=".left-toggle" bindtap="tapNext">
+                <image src='../../images/button/triangle@left.png' class="left-image" hidden="{{!flagLeft}}"></image>
+                <image src='../../images/button/triangle.dis@left.png' class="left-image" hidden="{{flagLeft}}"></image>
             </view>
-            <view class="content">????????</view>
-            <view class=".right-toggle">
-                <image></image>
+            <view class="title">{{title}}</view>
+            <view class=".right-toggle" bindtap="tapPrevious">
+                <image src='../../images/button/triangle@right.png' class='right-image'  hidden="{{!flagRight}}"></image>
+                <image src='../../images/button/triangle.dis@right.png' class='right-image' hidden="{{flagRight}}"></image>
+
             </view>
         </view>
     </view>

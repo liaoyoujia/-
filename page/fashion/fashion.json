@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "v-content": "/components/fashionComponent/index"
+    "v-content": "/components/fashionComponent/index",
+    "v-movie":"/components/movie/index"
   }
 }

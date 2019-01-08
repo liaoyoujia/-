@@ -1,0 +1,9 @@
+<!--components/movie/index.wxml-->
+<view class="contain">
+<view class="top">
+<image class="top-image" src="{{bigImage}}"></image>
+</view>
+<view class="title">
+<image src="../../images/icon/movie@tag.png" class="movie-image"></image>
+</view>
+</view>

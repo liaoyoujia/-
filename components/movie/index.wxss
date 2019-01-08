@@ -1,0 +1,27 @@
+/* components/movie/index.wxss */
+.contain{
+    display: flex;
+    width:750rpx;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 70rpx;
+}
+.top{
+    width: 100%;
+}
+.title{
+    position: absolute;
+    bottom:-88rpx;
+    left:20rpx;
+
+}
+.top-image{
+    width: 100%;
+}
+.movie-image{
+    width:46rpx;
+    height:142rpx;
+
+
+}

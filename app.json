@@ -1,7 +1,6 @@
 {
   "pages": [
     "page/fashion/fashion",
-    
     "page/book/book",
     "page/like/like"
   ],

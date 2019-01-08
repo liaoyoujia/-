@@ -2,9 +2,16 @@
 .box{
     display: flex;
     width: 100%;
+    /* height: 100vh; */
+    min-height: 100vh;
+    position: relative;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
 }
 .top{
     display: flex;
@@ -16,6 +23,7 @@
     align-items: center;
     height:88rpx;  
     padding-left:12rpx;
+    padding-bottom: 10rpx;
     justify-content: space-between;
 }
 .heart{
@@ -85,11 +93,11 @@ font-size: 20rpx;
     margin-left:20rpx;
 
 }
-.content::after {
+.contain::after {
     border: none !important;
     padding: 0 !important;
 }
-.content{
+.contain{
     padding: 0 !important;
     border:none !important;
     padding-top:18rpx;
@@ -108,4 +116,47 @@ font-size: 20rpx;
 
     width: 26rpx;
     height:26rpx;
+}
+.bottom{
+    width: 100%;
+    margin-top:56rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.toggle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 54rpx;
+    left:50%;
+    margin-left:-42%;
+    width: 85%;
+    border-radius: 12rpx;
+    align-items:center;
+    background-color: #eee;
+}
+.content{
+margin:0 auto;
+    /* position: relative; */
+    /* bottom: 0rpx; */
+    /* left:50%; */
+    max-width: 80%;
+    font-size: 36rpx;
+}
+.left-image{
+height: 80rpx;
+width: 80rpx;
+}
+.title{
+    line-height: 34rpx;
+    text-align: center;
+    font-size:28rpx;
+
+}
+.right-image{
+    height: 80rpx;
+    width: 80rpx;
 }

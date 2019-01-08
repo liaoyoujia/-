@@ -1,5 +1,13 @@
-<!--page/fashion/fashion.wxml-->
-<view>
-<v-content/>
-
+<!-- page/fashion/fashion.wxml -->
+<view class="first-page">
+    <v-content fav="{{currentData.fav_nums}}" 
+    index="{{currentData.index}}" 
+    content="{{currentData.content}}" 
+    title="{{currentData.title}}"
+    flagLeft="{{leftFlag}}"
+    flagRight="{{rightFlag}}"
+    bind:Next="getNextData"
+    bind:Previous="getPreData">
+        <v-movie bigImage="{{currentData.image}}" />
+    </v-content>
 </view>
