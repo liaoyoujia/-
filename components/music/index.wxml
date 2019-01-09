@@ -1,9 +1,9 @@
 <!-- components/music/index.wxml -->
 <view class='music'>
     <view class="music-top">
-        <image class="top-image" src="http://bl.7yue.pro/images/music.1.png"></image>
-        <image class="toggle" src="../../images/icon/player@playing.png" bindtap="onMusicTap"></image>
-        <!-- <image class="toggle" src="../../images/icon/player@waitting.png"></image> -->
+        <image class="{{onmusic? 'top-image rotate':'top-image'}}" src="{{bigImage}}"></image>
+        <image  class="toggle" src="../../images/icon/player@playing.png" bindtap="unMusicTap" hidden="{{!onmusic}}"></image>
+        <image  class="toggle" src="../../images/icon/player@waitting.png" bindtap="onMusicTap" hidden="{{onmusic}}"></image>
     </view>
     <view class="bottom">
     <image class="bottom-image" src="../../images/icon/music@tag.png"></image>

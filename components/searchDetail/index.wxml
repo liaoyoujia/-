@@ -1,0 +1,31 @@
+<!--components/searchDetail/index.wxml-->
+<view class="search-detail">
+    <view class="search">
+        <input type="text" placeholder="书籍名" class="book-name"/>
+        <image class="search-icon" src="../../images/icon/search.png"></image>
+        <image class="calcel-icon" src="../../images/icon/cancel.png"></image>
+        <text class="cancel">取消</text>
+    </view>
+    <view class="history">
+        <view class="top">
+       <view class="block"></view> 
+       <text class="title">历史搜索</text>
+       </view>
+       <view class="bottom"></view>
+    </view>
+    <view class="hot">
+        <view class="top">
+       <view class="block"></view> 
+       <text class="title">热门搜索</text>
+       </view>
+       <view class="bottom">
+           <block wx:for="{{hots}}" wx:key="{{index}}">
+           <view >{{item}}</view>
+           </block>
+       </view>
+    </view>
+    
+    
+
+
+</view>

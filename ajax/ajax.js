@@ -1,15 +1,14 @@
-import {config} from './config'
+import { config } from './config'
 class Http {
     request(params) {
-        console.log(config,121232312312312321)
         wx.request({
             url: config.baseUrl + params.url,
             method: params.method || 'GET',
-            header:{
-                'content-type':'application/json',
-                'appkey':config.appkey
+            header: {
+                'content-type': 'application/json',
+                'appkey': config.appkey
             },
-            data:''||params.data,
+            data: '' || params.data,
             success: (res) => {
                 let code = res.statusCode.toString()
                 if (code.startsWith('2') || code === '304') {
@@ -33,32 +32,60 @@ class Http {
             duration: 2000
         })
     }
-    getLatestData(resback){
+    getLatestData(resback) {
         this.request({
             url: "classic/latest",
-            success:(res)=>{
+            success: (res) => {
                 resback(res)
                 wx.setStorageSync("index", res.index)
             }
         })
     }
-    getPre(index,resback){
+    getPre(index, resback) {
         this.request({
-           url:"classic/"+index+"/previous",
-            success:(res)=>{
+            url: "classic/" + index + "/previous",
+            success: (res) => {
                 resback(res)
-            }    
+            }
         })
     }
-    getNext(index,resback){
+    getNext(index, resback) {
         this.request({
-            url:"classic/"+index+"/next",
-             success:(res)=>{
-                 resback(res)
-             }    
-         })  
+            url: "classic/" + index + "/next",
+            success: (res) => {
+                resback(res)
+            }
+        })
     }
+    getHotBooks(params) {
+        return new Promise((resolve, reject)=> {
+            wx.request({
+                url:config.baseUrl + params.url,
+                header: {
+                    'content-type': 'application/json',
+                    'appkey': config.appkey
+                },
+                data:params&&params.data,
+                success: (res) => {
+                    let result = res.data;
+                    resolve(result);
+                },
+                fail: () => {
+                    reject("?????????")
+                }
+            })
+        })
+
+    }
+    // getBook(resback){
+    //     this.request({
+    //         url:"",
+    //         success:(res)=>{
+    //             resback(res)
+    //         }
+    //     })
+    // }
 
 
 }
-export{Http}
+export { Http }

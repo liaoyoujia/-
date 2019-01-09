@@ -8,7 +8,7 @@ App({
 
     },
     onHide: function() {
-
+        wx.removeStorageSync('musicStatus')
     },
     onError: function(msg) {
 

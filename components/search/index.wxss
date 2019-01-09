@@ -1,0 +1,45 @@
+/* components/search/index.wxss */
+ .search{
+     width: 750rpx;
+     height:80rpx;
+     border-top:1px solid #eee;
+     padding:20rpx 0rpx;
+     position:fixed;
+     top:0;
+     left: 0;
+     background-color: #fff;
+    box-shadow: 4rpx 4rpx  4px #aaa;
+    z-index: 12;
+ }
+ .box{
+    width: 100%;
+    margin: 0 auto;
+    padding:10rpx 0;
+    text-align: center;
+    position: relative;
+}
+.search-book{
+    display: inline-block;
+    width: 92%;
+    background-color: #f5f5f5;
+    border-radius: 16rpx;
+    height:68rpx;
+    color:#999;
+
+    font-size: 32rpx;
+
+
+}
+.icon{
+    width:14px;
+    height:14px;
+    position: absolute;
+    z-index: 10;
+    top:33%;
+    left:33%;
+}
+.searchIcon{
+    width:14px;
+    height:14px;
+   
+}

@@ -49,7 +49,7 @@ Page({
       return false
     }
     
-    (value < this.data.index) ? this.setData({ currentData: res, leftFlag: true,type }) : this.setData({ currentData: res, leftFlag: false ,type})
+    (value < this.data.index) ? this.setData({ currentData: res, rightFlag:true,leftFlag: true,type }) : this.setData({ currentData: res, leftFlag: false ,type})
   },
 
 
