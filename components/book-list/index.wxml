@@ -11,7 +11,7 @@
             <view class="face">
                 <text class="name">{{item.title}}</text>
                 <text class="writer">{{item.author}}</text>
-                <text class="like">{{item.fav_nums}}喜欢</text>
+                <text class="like">{{item.fav_nums}}</text>
             </view>
         </view>
     </view>

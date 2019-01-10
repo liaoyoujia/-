@@ -63,7 +63,7 @@ class Http {
                 url:config.baseUrl + params.url,
                 header: {
                     'content-type': 'application/json',
-                    'appkey': config.appkey
+                    'appkey': config.appkey,
                 },
                 data:params&&params.data,
                 success: (res) => {

@@ -1,6 +1,7 @@
-<!--page/book/book.wxml-->
+<!-- page/book/book.wxml -->
 <view class="book">
-    <!-- <v-search></v-search>
-    <v-book-list></v-book-list> -->
+    <!-- <v-search></v-search> -->
+    <!-- <v-book-list></v-book-list> -->
     <v-search-detail></v-search-detail>
+    <!-- <v-loading></v-loading> -->
 </view>

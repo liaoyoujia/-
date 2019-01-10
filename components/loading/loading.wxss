@@ -1,0 +1,38 @@
+/* components/loading/loading.wxss */
+.loading{
+position: fixed;
+top: 100rpx;
+left: 0;
+bottom: 0;
+right: 0;
+}
+.front-ball ,.behind-ball{
+width: 45rpx;
+height: 45rpx;
+position: absolute;
+border-radius: 50%;
+background-color: cyan;
+top: 30%;
+left: 50%;
+margin-left:-10rpx;
+margin-top:-10rpx;
+animation:mymove 2.5s infinite ease; 
+}
+.behind-ball{
+animation-delay: -2s;
+}
+@keyframes mymove
+{
+0% {transform: scale(0)
+}
+25%{
+    transform: scale(50%) 
+}
+50% {transform: scale(100%)}
+75%{
+    transform: scale(50%)  
+}
+100% {
+    transform : scale(0%)
+}
+}

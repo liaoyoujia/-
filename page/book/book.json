@@ -2,6 +2,7 @@
   "usingComponents": {
     "v-search":"/components/search/index",
     "v-book-list":"/components/book-list/index",
-    "v-search-detail":"/components/searchDetail/index"
+    "v-search-detail":"/components/searchDetail/index",
+    "v-loading":"/components/loading/loading"
   }
 }

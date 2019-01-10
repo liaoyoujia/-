@@ -1,0 +1,5 @@
+<!--components/loading/loading.wxml-->
+<view class="loading">
+    <view class="front-ball"></view>
+    <view class="behind-ball"></view>
+</view>
