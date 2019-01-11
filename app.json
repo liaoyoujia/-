@@ -2,7 +2,10 @@
   "pages": [
     "page/fashion/fashion",
     "page/book/book",
-    "page/like/like"
+    "page/like/like",
+    "page/detail/detail"
+    
+   
   ],
   "window": {
     "navigationBarTitleText": "今夜有雨",
@@ -11,13 +14,13 @@
     "navigationStyle": "default"
   },
   "tabBar": {
-    "backgroundColor":"#fff",
+    "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath":"page/fashion/fashion",
+        "pagePath": "page/fashion/fashion",
         "text": "流行",
         "iconPath": "./images/tab/classic.png",
-        "selectedIconPath":"./images/tab/classic@highlight.png"
+        "selectedIconPath": "./images/tab/classic@highlight.png"
       },
       {
         "pagePath": "page/book/book",
@@ -30,7 +33,6 @@
         "text": "喜欢",
         "iconPath": "./images/tab/my.png",
         "selectedIconPath": "./images/tab/my@highlight.png"
-        
       }
     ]
   }

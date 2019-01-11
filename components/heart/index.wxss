@@ -1,0 +1,19 @@
+/* components/heart/index.wxss */
+.heart{
+    display: inline-block;
+    position: relative;
+}
+.heart-image{
+    width:32rpx;
+    height:28rpx;
+    
+}
+.number{
+
+    position: absolute;
+    font-size:24rpx;
+    line-height:24rpx;
+    color:#bbbbbb;
+    top:0;
+    right:-32rpx;
+}

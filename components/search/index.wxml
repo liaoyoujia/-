@@ -1,5 +1,5 @@
 <!--components/search/index.wxml-->
-<view class="search">
+<view class="search" bindtap="search">
     <view class="box"><input type="text" class="search-book" placeholder="搜索书籍"/></view>
     <view class="icon"><image src='../../images/icon/search.png' class="searchIcon"></image></view>
 </view>

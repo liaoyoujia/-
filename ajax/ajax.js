@@ -60,6 +60,7 @@ class Http {
     getHotBooks(params) {
         return new Promise((resolve, reject)=> {
             wx.request({
+                method:params&&params.method||'GET',
                 url:config.baseUrl + params.url,
                 header: {
                     'content-type': 'application/json',

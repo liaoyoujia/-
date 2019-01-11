@@ -1,7 +1,6 @@
 <!-- page/book/book.wxml -->
 <view class="book">
-    <!-- <v-search></v-search> -->
-    <!-- <v-book-list></v-book-list> -->
-    <v-search-detail></v-search-detail>
-    <!-- <v-loading></v-loading> -->
+    <v-search bind:search="search" wx:if="{{showSearchDetail}}"></v-search>
+    <v-book-list wx:if="{{showSearchDetail}}"></v-book-list>
+    <v-search-detail wx:if="{{!showSearchDetail}}" catch:cancel="cancelPrimary"></v-search-detail>
 </view>

@@ -3,41 +3,41 @@
     <view class="search">
         <input type="text" placeholder="书籍名" class="book-name" bindconfirm="searchBook" value="{{inputValue}}" />
         <image class="search-icon" src="../../images/icon/search.png"></image>
-        <image class="calcel-icon" src="../../images/icon/cancel.png"></image>
-        <text class="cancel">取消</text>
+        <image class="calcel-icon" src="../../images/icon/cancel.png" bindtap="reset"></image>
+        <text class="cancel" bindtap="cancel">取消</text>
     </view>
-    <view class="history">
+    <view class="history" wx:if="{{!(loading&&msg)}}">
         <view class="top">
             <view class="block"></view>
             <text class="title">历史搜索</text>
         </view>
         <view class="bottom-history">
             <block wx:for="{{history}}" wx:key="{{index}}" wx:if="{{history}}">
-                <view class="item-history">{{item.value}}</view>
+                <view class="item-history" >{{item.value}}</view>
             </block>
         </view>
     </view>
-    <view class="hot">
+    <view class="hot" wx:if="{{!(loading&&msg)}}">
         <view class="top">
             <view class="block"></view>
             <text class="title">热门搜索</text>
         </view>
         <view class="bottom">
             <block wx:for="{{hots}}" wx:key="{{index}}" wx:if="{{hots.length}}">
-                <view class="item">{{item}}</view>
+                <view class="item" bindtap="hotSearch" data-item="{{item}}">{{item}}</view>
             </block>
         </view>
     </view>
-    <view class="content" wx:if="{{books.length}}">
-        <view class="book-item" wx:for="{{books}}" wx:if="{{books.length}}"  wx:key="index">
-            <view class="book-decoration">
-                <image src="{{item.image}}" class="book-image"></image>
+    <view class="content" wx:if="{{books.length}}" >
+        <view class="content-item"  wx:for="{{books}}"   wx:key="index" data-index="{{item.id}}" bindtap="adc">
+            <view class="content-decoration">
+                <image src="{{item.image}}" class="content-image"></image>
             </view>
-            <view class="face">
-                <text class="name">{{item.title}}</text>
-                <text class="writer">{{item.author[0]}}</text>
+            <view class="content-face">
+                <text class="content-name">{{item.title}}</text>
+                <text class="content-writer">{{item.author[0]}}</text>
             </view>
         </view>
-    </view>
+        </view>
     <v-loading wx:if="{{loading&&msg}}"></v-loading>
 </view>

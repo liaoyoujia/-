@@ -4,7 +4,7 @@
         <image class="choose" src="/images/book/quality.png"></image>
     </view>
     <view class="contain">
-        <view class="all" wx:for="{{hotBook}}" wx:key="index">
+        <view class="all" wx:for="{{hotBook}}" wx:key="index" bindtap="navigator" data-index="{{item.id}}">
             <view class="book-decoration">
                 <image src="{{item.image}}" class="book-image"></image>
             </view>

@@ -1,0 +1,65 @@
+<!-- page/detail/detail.wxml -->
+<view class="detail">
+    <view class="header">
+        <view class="avater">
+            <image src="{{detailBook.image}}" class="avater-image"></image>
+        </view>
+        <view class="title">{{detailBook.title}}</view>
+        <view class="author">{{detailBook.author[0]}}</view>
+    </view>
+    <view class="commment">
+        <view class="short">短评</view>
+        <view class="items">
+            <view class="item" wx:key="{{index}}" wx:for="{{shortComment}}" wx:if="{{shortComment.length}}">
+                {{item.content}}
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="introduce">内容介绍</view>
+        <view class="introduce-detail">
+            <text decode="{{true}}" wx:for="{{contentWorad}}" wx:key="{{index}}" class="introduce-content">
+                {{item}}
+            </text>
+        </view>
+    </view>
+    <view class="info">
+        <view class="book-info">书本信息</view>
+        <view class="word store">
+            <text decode>出版社&nbsp;&nbsp;&nbsp;</text>
+            <text>{{detailBook.publisher}}</text>
+        </view>
+        <view class="word year">
+            <text decode>出版年&nbsp;&nbsp;&nbsp;</text>
+            <text>{{detailBook.pubdate}}</text>
+        </view>
+        <view class="word page">
+            <text decode>页数&nbsp;&nbsp;&nbsp;</text>
+            <text>{{detailBook.pages}}</text>
+        </view>
+        <view class="word price">
+            <text decode>定价&nbsp;&nbsp;&nbsp;</text>
+            <text>{{detailBook.price}}</text>
+        </view>
+        <view class="word decoration">
+            <text decode>装帧&nbsp;&nbsp;&nbsp;</text>
+            <text>{{detailBook.isbn}}</text>
+        </view>
+    </view>
+    <view class="footer">
+        <input type="text" placeholder="输入短评" class="output" bindtap="tapShow" />
+        <v-heart number="{{number}}"></v-heart>
+    </view>
+    <view class="short-commment" wx:if="{{showComment}}">
+        <view class="hidden"></view>
+        <view class="send">
+            <view class="send-top">
+                <view class="no">暂无短评</view>
+                <view class="stop" bindtap="callBack">取消</view>
+            </view>
+            <view class="send-bottom">
+                <input type="text" placeholder="短评最多12字" class="more" bindconfirm="sendComment" />
+            </view>
+        </view>
+    </view>
+</view>

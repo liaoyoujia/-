@@ -1,0 +1,8 @@
+<!--components/heart/index.wxml-->
+<view class="heart" bindtap="fav">
+<view class="top">
+<image src="../../images/icon/like.png" class="heart-image" hidden="{{msg}}"></image>
+<image src="../../images/icon/like@dis.png"  class="heart-image" hidden="{{!msg}}"></image>
+</view>
+<text class="number">{{number}}</text>
+</view>

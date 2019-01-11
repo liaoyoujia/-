@@ -10,9 +10,10 @@ Component({
 
   },
   attached() {
-  // 请求热门书籍数据
-    axios.getHotBooks({url:'book/hot_list'}).then((res)=>{
-      this.setData({hotBook:res})})
+    // 请求热门书籍数据
+    axios.getHotBooks({ url: 'book/hot_list' }).then((res) => {
+      this.setData({ hotBook: res })
+    })
 
   },
 
@@ -36,6 +37,13 @@ Component({
 
       })
       console.log(this, 12)
+    },
+    navigator(e) {
+      wx.navigateTo({
+        url: '/page/detail/detail?id='+e.currentTarget.dataset.index
+      })
+
     }
+
   }
 })
