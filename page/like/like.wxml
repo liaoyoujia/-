@@ -1,2 +1,33 @@
-<!--page/like/like.wxml-->
-<text>page/like/like.wxml</text>
+<!-- page/like/like.wxml -->
+<view class="about">
+    <view class="top-image">
+        <image src='../../static/my@bg.png' class="my-bg"></image>
+        <image src="../../static/my.png" class="image-click"></image>
+        <image src="../../static/study.png" class="study-image"></image>
+        <view class="block">
+            <view class="our">
+                <image src="../../static/about.png" class="our-image"></image>
+                <text>关于我们</text>
+            </view>
+            <view class="number">
+                <text class="fav-number">21</text>
+                <text class="fav-book">喜欢的书</text>
+            </view>
+        </view>
+    </view>
+    <view class="like">
+        <image src="../../static/like.png" class="like-image"></image>
+    </view>
+    <view class="contain">
+        <view class="like-item" wx:for="{{favArr}}" wx:key="index">
+            <view class="like-top">
+                <view class="film" wx:if="{{item.type==100}}">电影</view>
+                <view class="film" wx:if="{{item.type==200}}">句子</view>
+                <view class="film" wx:if="{{item.type==300}}">音乐</view>
+                <view><v-heart/></view>
+            </view>
+            <view class="like-middle"><image src="{{item.image}}" class="middle-image"></image></view>
+            <view class="text">{{item.content}}</view>
+        </view>
+    </view>
+</view>

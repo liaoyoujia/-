@@ -1,17 +1,27 @@
 // page/like/like.js
+import { Http } from '../../ajax/ajax'
+const http = new Http()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    favArr:[]
 
+  },
+  getFav(res){
+    console.log(res,321312)
+    this.setData({
+      favArr:res      
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    http.getHotBooks({url:'classic/favor'}).then(this.getFav)
 
   },
 

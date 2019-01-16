@@ -1,1 +1,128 @@
 /* page/like/like.wxss */
+.about {
+    background-color: #f3f3f3;
+    min-height: 100vh;
+}
+
+.top-image .my-bg {
+    display: block;
+    width: 750rpx;
+    height: 574rpx;
+
+
+}
+
+.top-image {
+    position: relative;
+    vertical-align: middle;
+}
+
+.image-click {
+    width: 150rpx;
+    height: 150rpx;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -75rpx;
+    margin-top: -75rpx;
+
+}
+
+
+.study-image {
+    width: 150rpx;
+    height: 150rpx;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.our-image {
+    display: block;
+    width: 34rpx;
+    height: 34rpx;
+    margin: 0 auto 4rpx;
+}
+
+
+.block {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 0 80rpx;
+    text-align: center;
+    bottom: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28rpx;
+    color: #999999;
+
+
+}
+
+.fav-number {
+    display: block;
+    margin-bottom: 3rpx;
+    color: #333;
+    font-size: 36rpx;
+}
+
+.like {
+    padding: 30rpx 0 30rpx;
+    text-align: center;
+}
+
+.like-image {
+    width: 97rpx;
+    height: 42rpx;
+
+
+}
+
+.like-item {
+    background-color: #fff;
+    width: 42.5%;
+    margin-right:5%;
+    margin-bottom: 4%;
+    padding-top:14rpx;
+    align-items: center;
+}
+
+.like-top {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding:0 16%;
+    justify-content: space-between;
+}
+
+.middle-image {
+    width: 100%;
+    height: 240rpx;
+}
+
+.text {
+    padding: 30rpx;
+    font-size: 28rpx;
+    height: 130rpx;
+    color: #666666;
+    overflow: hidden;
+
+}
+.film{
+    font-size:28rpx;
+    color:#333;
+}
+.contain{
+    display: flex;
+    width: 100%;
+    padding-left:5%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}

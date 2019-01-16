@@ -1,5 +1,7 @@
 // components/searchDetail/index.js
-import { Http } from '../../ajax/ajax'
+import {
+  Http
+} from '../../ajax/ajax'
 const axios = new Http()
 Component({
   /**
@@ -20,9 +22,13 @@ Component({
   },
   attached() {
     // 获取热搜关键字
-    axios.getHotBooks({ url: 'book/hot_keyword' }).then((res) => {
+    axios.getHotBooks({
+      url: 'book/hot_keyword'
+    }).then((res) => {
       console.log(res, 97979)
-      this.setData({ hots: res.hot })
+      this.setData({
+        hots: res.hot
+      })
     })
 
 
@@ -57,7 +63,8 @@ Component({
 
       if (e.detail.value !== '') {
         axios.getHotBooks({
-          url: 'book/search', data: {
+          url: 'book/search',
+          data: {
             q: e.detail.value,
             summary: 0
           }
