@@ -24,6 +24,8 @@ Page({
       currentData: res ,
       type                   
     })
+    // http.getHotBooks({url:'classic/'+type+'/'+res.id+'/favor'}).then(this.start)
+
   },
   allotPre(res) {
     console.log(res, 3312312)
@@ -74,6 +76,9 @@ Page({
 
 
   },
+  // start(res){
+  //   console.log(res,'123231231231232312312312312321312312123123123')
+  // },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -86,7 +91,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(this.data.currentData, 666)
   },
 
   /**

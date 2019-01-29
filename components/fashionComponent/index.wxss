@@ -90,7 +90,7 @@ font-size: 20rpx;
 
 }
 .forward{
-    margin-left:20rpx;
+    margin-left:42rpx;
 
 }
 .contain::after {

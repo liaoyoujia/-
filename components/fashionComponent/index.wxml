@@ -13,10 +13,11 @@
             </view>
         </view>
         <view class='right'>
-            <view class="heart">
+        <v-heart number="{{fav}}" favTrue="{{likeStatus}}" />
+            <!-- <view class="heart">
                 <image src="../../images/icon/like.png" class="heart-img"></image>
                 <text class="assist">{{fav}}</text>
-            </view>
+            </view> -->
             <view class="forward">
                 <button open-type="share" class="contain">
                     <image src='../../images/icon/share.png' class="share"></image>

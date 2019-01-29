@@ -1,6 +1,7 @@
 <!-- page/fashion/fashion.wxml -->
 <view class="first-page">
     <v-content fav="{{currentData.fav_nums}}" 
+    likeStatus="{{currentData.like_status==1?true:false}}"
     index="{{currentData.index}}" 
     content="{{currentData.content}}" 
     title="{{currentData.title}}"

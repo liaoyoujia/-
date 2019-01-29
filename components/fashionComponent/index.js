@@ -9,6 +9,10 @@ Component({
       type: Number,
       value: 0,
     },
+    likeStatus:{
+      type:Boolean,
+      value:false
+    },
     index: {
       type: Number,
       value: 0,

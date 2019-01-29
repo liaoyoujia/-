@@ -7,22 +7,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    favArr:[]
+    favArr:[],
+    jump:false,
+    favTrue:true,
+    clickTrue:false
 
   },
   getFav(res){
-    console.log(res,321312)
+  console.log(res,'达到我把，哈哈');
+  
     this.setData({
       favArr:res      
     })
   },
-
+  jumpItem(){
+    let msg=!this.data.jump
+    this.setData({jump:msg})
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     http.getHotBooks({url:'classic/favor'}).then(this.getFav)
-
   },
 
   /**

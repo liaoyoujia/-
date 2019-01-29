@@ -19,12 +19,12 @@
         <image src="../../static/like.png" class="like-image"></image>
     </view>
     <view class="contain">
-        <view class="like-item" wx:for="{{favArr}}" wx:key="index">
+        <view class="like-item" wx:for="{{favArr}}" wx:key="index" bindtap="jumpItem">
             <view class="like-top">
                 <view class="film" wx:if="{{item.type==100}}">电影</view>
                 <view class="film" wx:if="{{item.type==200}}">句子</view>
                 <view class="film" wx:if="{{item.type==300}}">音乐</view>
-                <view><v-heart/></view>
+                <view><v-heart jump="{{jump}}" artId="{{item.id}}" itemtype="{{item.type}}" number="{{item.fav_nums}}" favTrue="{{favTrue}}" clickTrue="{{clickTrue}}"/></view>
             </view>
             <view class="like-middle"><image src="{{item.image}}" class="middle-image"></image></view>
             <view class="text">{{item.content}}</view>

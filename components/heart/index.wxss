@@ -2,6 +2,7 @@
 .heart{
     display: inline-block;
     position: relative;
+    width:36rpx; 
 }
 .heart-image{
     width:32rpx;
@@ -9,11 +10,10 @@
     
 }
 .number{
-
     position: absolute;
-    font-size:24rpx;
+    font-size:26rpx;
     line-height:24rpx;
     color:#bbbbbb;
-    top:0;
-    right:-32rpx;
+    top:-2rpx;
+    right:-42rpx;
 }
